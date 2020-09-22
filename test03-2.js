@@ -1,21 +1,22 @@
 (function($, window) {
     $(function() {
-      $('#login').on('click', function(e) {
-        var email = $('#email').val(),
-            password = $('#password').val();
+      $('#login').on('click', function() {
+        //var email = $('#email').val(),
+            //password = $('#password').val();
         // alert(email);
         // alert(password);
-        function checkEmail(email){
+      function checkEmail(email){
+        var email = $('#email').val();
         if (email == '') {
-          return confirm('メールアドレスを入力してください');
+          alert('メールアドレスを入力してください');
         } else if (email.indexOf('@') < 0) {
-          return confirm('メールアドレスには必ず「@」が必要です');
+          alert('メールアドレスには必ず「@」が必要です');
         }};
-        function checkPassword(password){
+      function checkPassword(password){
+        var password = $('#password').val();
         if (password == '') {
-          return confirm('パスワードを入力してください');
+          alert('パスワードを入力してください');
         } else if (password.length < 6) {
-          return confirm('パスワードは6文字以上です');
+          alert('パスワードは6文字以上です');
         }};
-    });
   })(jQuery, window);
