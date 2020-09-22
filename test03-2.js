@@ -1,6 +1,9 @@
 (function($, window) {
-    $(function() {
+    //$(function() {
       $('#login').on('click', function() {
+        checkEmail(email);
+        checkPassword(password);
+      });
         //var email = $('#email').val(),
             //password = $('#password').val();
         // alert(email);
